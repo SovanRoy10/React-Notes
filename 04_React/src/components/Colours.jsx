@@ -2,7 +2,7 @@ import Colour from "./Colour"
 import { useState, useEffect } from "react"
 
 export default function Colours() {
-    const [backgroundColor, setBackgroundColor] = useState('white');
+    const [backgroundColor, setBackgroundColor] = useState('#212121');
 
 
     const bodyColor = (newColor) => {
