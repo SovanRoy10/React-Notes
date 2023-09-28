@@ -1,14 +1,17 @@
 import Colour from "./Colour"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Colours() {
     const [backgroundColor, setBackgroundColor] = useState('white');
-    
+
 
     const bodyColor = (newColor) => {
         setBackgroundColor(newColor);
-        document.body.style.backgroundColor = newColor
     };
+
+    useEffect(() => {
+        document.body.style.backgroundColor = backgroundColor
+    }, [backgroundColor, setBackgroundColor])
 
     return (
         <div className="flex bg-gray-100 p-4 rounded-lg flex-wrap shadow-lg">
