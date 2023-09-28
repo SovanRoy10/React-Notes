@@ -1,8 +1,9 @@
-import './App.css'
+
 import { useState, useCallback, useEffect, useRef } from 'react'
 
 function App() {
 
+  //useState hook
   const [length, setLength] = useState(8);
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [characterAllowed, setCharacterAllowed] = useState(false);
@@ -38,6 +39,8 @@ function App() {
 
     passwordRef.current?.setSelectionRange(0, 19)
 
+
+    //next js e server side rendering hoi okhane window object hoi na
     window.navigator.clipboard.writeText(password)
 
   }, [password])
