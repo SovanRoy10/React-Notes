@@ -15,6 +15,7 @@ export default function Github() {
     // }, [])
 
     const data = useLoaderData()
+    
     return (
         <>
             <div className='text-center m-4 bg-gray-600 text-white text-3xl p-4'>Github followers : {data?.followers}</div>
