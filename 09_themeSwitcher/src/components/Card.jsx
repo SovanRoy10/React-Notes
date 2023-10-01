@@ -1,7 +1,7 @@
-// import useTheme from "../context/theme";
+
 
 export default function Card() {
-    // const { themeMode, darkTheme, lightTheme } = useTheme()
+
     return (
         <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="/">
