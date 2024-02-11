@@ -1,3 +1,9 @@
-import {configureStore} from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
 
-export const store = configureStore({})
+import todoReducer from "../features/todo/todoSlice";
+
+export const store = configureStore({
+  reducer: todoReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ serializableCheck: false }),
+});
