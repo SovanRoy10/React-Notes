@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../features/todo/todoSlice";
 
@@ -8,6 +8,7 @@ function AddTodo() {
 
   const addTodoHandler = (e) => {
     e.preventDefault();
+    if (input.length === 0) return;
     dispatch(addTodo(input));
     setInput("");
   };
